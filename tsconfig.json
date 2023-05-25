@@ -2,11 +2,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "paths": {
-      "angular-resizable-pane": [
-        "dist/angular-resizable-pane"
-      ]
-    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -24,6 +19,14 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "paths": {
+      "angular-resizable-pane": [
+        "dist/angular-resizable-pane"
+      ],
+      "test": [
+        "dist/test"
+      ]
+    },
     "lib": [
       "ES2022",
       "dom"

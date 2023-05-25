@@ -1,1 +1,0 @@
-# npm-angular-resizable-pane

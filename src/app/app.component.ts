@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'demo';
 
   layout : Layout = {
+    
     orientation: 'horizontal',
     unitType: 'percent',
     initSize: 20,

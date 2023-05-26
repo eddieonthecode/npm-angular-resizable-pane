@@ -1,3 +1,10 @@
 <div class="container">
-    <angular-resizable-pane></angular-resizable-pane>
+    <angular-resizable-pane [layout]="layout">
+        <ng-container ngProjectAs="section_1">
+            <h1>Section1</h1>
+        </ng-container>
+        <ng-container ngProjectAs="section_2">
+            <h1>Section2</h1>
+        </ng-container>
+    </angular-resizable-pane>
 </div>

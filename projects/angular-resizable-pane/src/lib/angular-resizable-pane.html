@@ -1,1 +1,18 @@
-<h1>angualr resizable-pane</h1>
+<div #container class="resizable-pane" [class.use-btn]="useBtn" [class.resizing]="isResizing"
+    [class]="layout.orientation">
+    <div class="resizable-pane__container" [class]="layout.orientation">
+        <div #section1 class="resizable-pane__container-section"
+            [style.width]="layout.orientation == 'horizontal' ? formatUnit(section1Size) : ''"
+            [style.height]="layout.orientation == 'vertical' ? formatUnit(section1Size) : ''">
+            <ng-content select="section_1"></ng-content>
+        </div>
+        <div (mousedown)="!useBtn && handleMousedown($event)" class="resizable-pane__container-separator">
+            <div (mousedown)="useBtn && handleMousedown($event)" class="resizable-pane__container-btn"></div>
+        </div>
+        <div #section2 class="resizable-pane__container-section"
+            [style.width]="layout.orientation == 'horizontal' ? ('calc(100% - ' + formatUnit(section1Size) + ')') : ''"
+            [style.height]="layout.orientation == 'vertical' ? ('calc(100% - ' + formatUnit(section1Size) + ')') : ''">
+            <ng-content select="section_2"></ng-content>
+        </div>
+    </div>
+</div>

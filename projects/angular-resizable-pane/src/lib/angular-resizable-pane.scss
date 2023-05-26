@@ -1,0 +1,86 @@
+.resizable-pane {
+    height: 100%;
+    width: 100%;
+
+    &__container {
+        height: 100%;
+        display: flex;
+
+        &.horizontal {
+            flex-direction: row;
+        }
+
+        &.vertical {
+            flex-direction: column;
+        }
+
+
+        // Button
+        &-btn {
+            border-radius: 3px;
+            border: 1px solid #444;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #444;
+        }
+
+        &.horizontal &-btn {
+            height: 30px;
+            width: 6px;
+            cursor: col-resize;
+        }
+
+        &.vertical &-btn {
+            height: 6px;
+            width: 30px;
+            cursor: row-resize;
+        }
+
+        // Separator
+        &-separator {
+            position: relative;
+            background-color: #333;
+        }
+        
+        &.horizontal &-separator {
+            height: 100%;
+            width: 1px;
+            cursor: col-resize;
+        }
+
+        &.vertical &-separator {
+            height: 1px;
+            width: 100%;
+            cursor: row-resize;
+        }
+
+        // Section
+        &.horizontal &-section {
+            height: 100%;
+        }
+
+        &.vertical &-section {
+            width: 100%;
+        }
+    }
+
+    &.use-btn &__container {
+        &.horizontal &-separator, &.vertical &-separator {
+            cursor: default;
+        }
+    }
+
+    &.resizing.horizontal {
+        cursor: col-resize !important;
+    }
+    &.resizing.vertical {
+        cursor: row-resize !important;
+    }
+    &.resizing {
+        .resizable-pane__container-separator {
+            background-color: cornflowerblue;
+        }
+    }
+}

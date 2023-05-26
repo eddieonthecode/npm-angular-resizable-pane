@@ -8,10 +8,11 @@ import { Layout } from 'projects/angular-resizable-pane/src/public-api';
 export class AppComponent {
   title = 'demo';
 
-  layouts : Layout[] = [
-    {
-      initSize: '50%',
-      template: 'section1'
-    }
-  ]
+  layout : Layout = {
+    orientation: 'horizontal',
+    unitType: 'percent',
+    initSize: 20,
+    minSize: 10,
+    maxSize: 50
+  }
 }

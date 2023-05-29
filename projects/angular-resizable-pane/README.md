@@ -1,24 +1,27 @@
-# AngularResizablePane
+# angular-resizable-pane
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+## In HTML:  
+```html
+<div class="container">
+    <angular-resizable-pane [layout]="layout">
+        <ng-container ngProjectAs="section_1">
+            <h1>Section1</h1>
+        </ng-container>
+        <ng-container ngProjectAs="section_2">
+            <h1>Section2</h1>
+        </ng-container>
+    </angular-resizable-pane>
+</div>
+```
 
-## Code scaffolding
+## Layout model:  
+```ts
+layout : Layout = {
+    orientation: 'horizontal',
+    unitType: 'percent',
+    initSize: 20,
+    minSize: 10,
+    maxSize: 50
+}
+```
 
-Run `ng generate component component-name --project angular-resizable-pane` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-resizable-pane`.
-> Note: Don't forget to add `--project angular-resizable-pane` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build angular-resizable-pane` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build angular-resizable-pane`, go to the dist folder `cd dist/angular-resizable-pane` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test angular-resizable-pane` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

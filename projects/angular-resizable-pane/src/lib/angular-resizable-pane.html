@@ -1,6 +1,7 @@
 <div
   #container
   class="resizable-pane"
+  [style.userSelect]="isResizing ? 'none' : 'unset'"
   [class.use-btn]="useBtn"
   [class.resizing]="isResizing"
   [class.horizontal]="layout.orientation == 'horizontal'"
@@ -24,7 +25,6 @@
       class="resizable-pane__container-separator"
     >
       <div
-        *ngIf="useBtn"
         (mousedown)="useBtn && handleMousedown($event)"
         class="resizable-pane__container-btn"
       ></div>

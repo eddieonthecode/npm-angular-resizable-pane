@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { AngularResizablePaneComponent } from './angular-resizable-pane.component';
-import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -8,7 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
     AngularResizablePaneComponent,
   ],
   imports: [
-    BrowserModule
   ],
   exports: [
     AngularResizablePaneComponent
